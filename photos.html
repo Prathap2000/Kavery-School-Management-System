@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+
+.column img {
+  opacity: 0.8; 
+  cursor: pointer;
+  width: 600px;
+  height:300px; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+  display: none;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body style="background-color:aquamarine;">
+
+<div style="text-align:center">
+  <h2>PHOTOS OF SCHOOL</h2>
+  <p>Click on the photo to view</p>
+</div>
+<div class="container">
+    <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+    <img id="expandedImg" style="width:100%">
+    <div id="imgtext"></div>
+  </div>
+
+<div class="row">
+  <div class="column">
+    <img src="photo/cl1.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl2.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl3.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl5.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl4.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl6.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl7.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl8.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl9.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl10.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="photo/cl11.jpg" alt="" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+</div>
+
+
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>

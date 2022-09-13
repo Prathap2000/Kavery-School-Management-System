@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Faculty</title>
+</head>
+<body style="background-color: aquamarine;">
+ <?php
+if(isset($_POST["submit"]))
+    {
+$Name = $_POST['name'];
+$Qualification = $_POST['Qualification'];
+$Designation = $_POST['Designation'];
+ echo $sql="INSERT INTO faculty (name, Qualification, Designation) VALUES ('$Name','$Qualification','$Designation')");
+    }
+?>
+<div>
+    <form  action=""  method="post">
+    <center><h3>Enter the below fields to add Faculty</h3>
+        <br>
+       <label for="">Name</label>
+        <input type="text" name="name" placeholder="Name"><br><br>
+        <br><br>
+       <label for="">Qualification</label>
+        <input type="text" name="Qualification" placeholder="Qualification"><br><br><br><br>
+       <label for="">Designation</label>
+        <input type="text" name="Designation" placeholder="Designation"><br><br>
+        <br><br>
+        <button type="submit" name="submit"> ADD</button>
+  </center>
+  </form>
+</div>
+</body>
+</html>
